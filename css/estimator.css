@@ -38,3 +38,15 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.hidden{
+   visibility:hidden;
+}
+.visible{
+   visibility:initial;
+}
+
+.title_block {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}

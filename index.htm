@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Estimator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,27 +29,79 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+        <script src="js/estimator.js"></script>
   </head>
 
   <body>
 
     <div class="container">
+      <h2 class="form-signin-heading title_block">Please answer questions one by one..</h2><hr>
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">This is the question..</h2>
-        <label for="inputAnswer" class="sr-only">Answer</label>
-        <input type="answer" id="inputAnswer" class="form-control" placeholder="Answer" required autofocus>
+      <form onsubmit="return estimate()">
+        <fieldset class="form-group">
+          <legend>Is it new interface or existing?</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="newInerface" value="new" checked onclick="newInterface()">
+              New
+            </label>
+          </div>
+          <div class="form-check">
+          <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="newInerface" value="existing" onclick="existingInterface()">
+              Existing
+            </label>
+          </div>
+        </fieldset>
 
-        <br>
-        <div class="button">
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        <div class="form-group">
+          <label for="inputAnswer1" id="labelAnswer1">Question 1</label>
+          <input type="text" id="inputAnswer1" class="form-control" placeholder="Answer" required autofocus>
+          <small id="answer1Help" class="form-text text-muted">This is mendatory question.</small>
         </div>
+        <div class="form-group">
+          <label for="inputAnswer2" id="labelAnswer2">Answer 2</label>
+          <input type="text" id="inputAnswer2" class="form-control" placeholder="Answer 2" required>
+          <small id="answer2Help" class="form-text text-muted">This is mendatory question.</small>
+        </div>
+
+          <button class="btn btn-primary" type="submit">Submit</button>
       </form>
 
     </div> <!-- /container -->
-    <div class="container">
-      <p>This is question
-        
+    <div class="container" >
+      <table class="table table-striped table-hover hidden" id="estimationTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
   </body>
 </html>
