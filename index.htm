@@ -56,14 +56,19 @@
         </fieldset>
 
         <div class="form-group">
-          <label for="inputAnswer1" id="labelAnswer1">Question 1</label>
-          <input type="text" id="inputAnswer1" class="form-control" placeholder="Answer" required autofocus>
-          <small id="answer1Help" class="form-text text-muted">This is mendatory question.</small>
+          <label for="affectedInterfaces" id="affectedInterfacesLabel">How many estimated interfaces affected?</label>
+          <input type="number" min="1" id="affectedInterfaces" class="form-control" placeholder="Number of affected interfaces" required autofocus>
+          <small id="affectedInterfacesHelp" class="form-text text-muted">Estimated number of interfaces to be changed or deleted or created.One interface is the one directional message flow. E.g. Calypso to SWIFT is one interface and SWIFT Ack from SWIFT to Calypso another interface.</small>
         </div>
         <div class="form-group">
-          <label for="inputAnswer2" id="labelAnswer2">Answer 2</label>
-          <input type="text" id="inputAnswer2" class="form-control" placeholder="Answer 2" required>
-          <small id="answer2Help" class="form-text text-muted">This is mendatory question.</small>
+          <label for="newInterface" id="newInterfacesLabel">How many estimated new interfaces needs to be developed?</label>
+          <input type="number" min="1" id="newInterface" class="form-control" placeholder="Number of new interfaces" required onblur="newInterfaceOnBlur()">
+          <small id="newInterfaceHelp" class="form-text text-muted">Estimated new interfaces to be created.</small>
+        </div>
+        <div class="form-group">
+          <label for="inputAnswer2" id="labelAnswer2">How many new code bases to be created?</label>
+          <input type="number" min="0" id="inputAnswer2" class="form-control" placeholder="Number of new codebases" required onblur="newCodeOnBlur()">
+          <small id="answer2Help" class="form-text text-muted">Is any of the interface needs new code developement?. If interface needs modification to existing code then do not count it.</small>
         </div>
 
           <button class="btn btn-primary" type="submit">Submit</button>
