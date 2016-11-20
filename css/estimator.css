@@ -49,4 +49,8 @@ body {
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
     margin-bottom: 5px;
+
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+    margin-top: 5px;
 }
